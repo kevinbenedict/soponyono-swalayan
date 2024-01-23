@@ -2,8 +2,8 @@ import React from "react"
 import clsx from "clsx"
 
 interface CardProps {
-  px?: 'normal' | 'big',
-  py?: 'normal' | 'big',
+  px?: 'none' | 'small' | 'normal' | 'big',
+  py?: 'none' | 'small' | 'normal' | 'big',
   bg_color?: 'white' | 'gray',
   border_color?: 'transparent',
   children: React.ReactNode,
@@ -13,11 +13,15 @@ const Card = (props: CardProps) => {
   const { px = 'normal', py = 'normal', bg_color = 'white', border_color = 'transparent', children } = props
 
   const pxVariants = {
+    none: 'px-0',
+    small: 'px-2',
     normal: 'px-6',
     big: 'px-8',
   }
 
   const pyVariants = {
+    none: 'py-0',
+    small: 'py-2',
     normal: 'py-6',
     big: 'py-8',
   }
