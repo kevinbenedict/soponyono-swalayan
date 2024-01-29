@@ -8,8 +8,12 @@ const appServe = app.isPackaged ? serve({
 
 const createWindow = () => {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 1000,
+    minWidth: 1000,
+    minHeight:800,
+    // frame: false,
+    // titleBarStyle: 'hidden',
     webPreferences: {
       preload: path.join(__dirname, "preload.js")
     }

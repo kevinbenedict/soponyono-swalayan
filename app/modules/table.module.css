@@ -1,0 +1,28 @@
+.table {
+  table-layout: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableHead th,
+.tableBody td {
+  padding: 15px 20px;
+}
+
+.tableHead th {
+  text-align: left;
+  border-bottom: 3px solid #9ca3af;
+}
+
+.tableBody td {
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tableBody td:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* .tableBody tr:hover {
+  background-color: #e5e7eb;
+} */
