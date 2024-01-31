@@ -18,7 +18,10 @@ export default function Login() {
       {/* Login Field */}
       <div className="relative flex place-items-center">
         <Card py='big' >
-          <Input id="password" label="Login" label_pos="top" type="password" name="password" placeholder="Masukkan Password"/>
+          <label htmlFor="">
+            <span className='block text-center mb-4 font-bold'>Login</span>
+            <Input id="password" type="password" name="password" placeholder="Masukkan Password"/>
+          </label>
           <Button type="submit" variant='primary' func={handleClick} mx_auto>Masuk</Button>
         </Card>
       </div>

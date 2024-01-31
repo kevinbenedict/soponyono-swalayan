@@ -4,17 +4,20 @@ import clsx from "clsx"
 interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
   type: 'button' | 'submit' | 'reset',
   variant: 'primary' | 'secondary' | 'secondary-outline',
+  shape?: 'pill' | 'round'
   func?: () => void,
   mx_auto?: boolean,
   children: React.ReactNode,
 }
 
 const Button = (props: ButtonProps) => {
-  const { type, variant, func, mx_auto, children, ...other } = props
+  const { type, variant, shape = 'pill', func, mx_auto, children, ...other } = props
 
   const btnClassnames = clsx(
-    'block py-2 px-4 font-bold border-2 rounded-full transition-colors',
+    'block font-bold border-2 rounded-full transition-colors',
     {'mx-auto': mx_auto === true},
+    {'py-2 px-3': shape === 'pill'},
+    {'p-2': shape === 'round'},
     {
       'text-white': variant === 'primary' || variant === 'secondary',
       'bg-blue-500 border-blue-500 hover:bg-blue-600': variant === 'primary',
